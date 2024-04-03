@@ -5,6 +5,7 @@ build/
 tmp/
 temp/
 media/
+
 # dotenv environment variable files
 .env
 .env.development.local
