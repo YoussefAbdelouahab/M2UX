@@ -22,7 +22,7 @@ export default function Navbar({ page = "" }) {
                     <div className="nav_links">
                         <ul>
                             <a href="/" className={page === 'home' ? 'page' : ''}><li>Accueil</li></a>
-                            <a href="/produit" className={page === 'product' ? 'page' : ''}><li>Produit</li></a>
+                            {/* <a href="/produit" className={page === 'product' ? 'page' : ''}><li>Produit</li></a> */}
                             <a href="/comparer" className={page === 'compare' ? 'page' : ''}><li>Comparaison</li></a>
                         </ul>
                     </div>
