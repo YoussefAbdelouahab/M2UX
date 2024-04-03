@@ -32,6 +32,6 @@ export class SearchController {
         // Récupérer la réponse de l'API de ChatGPT
         const chatGPTResponse = response.data.choices[0].message.content;
 
-        return { "[IA] GPT : ": chatGPTResponse };
+        return { "[IA]: ": chatGPTResponse };
     }
 }
