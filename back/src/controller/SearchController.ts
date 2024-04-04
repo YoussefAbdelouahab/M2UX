@@ -26,6 +26,7 @@ export class SearchController {
             },
         };
 
+        console.log(process.env.IA_URL, data, config)
         // Requete axios a l'api open ai
         const response = await axios.post(process.env.IA_URL, data, config)
 

@@ -1,0 +1,43 @@
+.product_page {
+    height: 100vh;
+    overflow: hidden;
+
+    .product_banner {
+        height: 100vh;
+        background-color: black;
+        margin-top: -6%;
+        padding-top: 12%;
+        padding-right: 10%;
+        padding-left: 10%;
+        display: flex;
+        color: #ffffff;
+
+        .banner_left {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            width: 100%;
+
+            .imagecontainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        .banner_right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            p {
+                width: 80% !important;
+            }
+        }
+    }
+}
