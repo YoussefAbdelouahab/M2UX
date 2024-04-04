@@ -71,9 +71,7 @@ export default function ResultV2() {
 
     async function SearchWord() {
       
-        // Requete axios a l'api open ai
-        const response = await axios.post(IA_URL, data, config) 
-        navigate(`/resultat/${response.data.choices[0].message.content}`)
+
     }
     return (
         <>
