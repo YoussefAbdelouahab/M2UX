@@ -71,11 +71,7 @@ export default function ResultV2() {
 
     async function SearchWord() {
         let content = "Répond moi en un seul mot, donne-moi une marque de produit équivalent en France : " + SearchedWord
-        const data = {
-            model: IA_MODEL,
-            messages: [{ role: "user", content: content }],
-            temperature: 0,
-        };
+        
         const config = {
             headers: {
                 "Content-Type": "application/json",
