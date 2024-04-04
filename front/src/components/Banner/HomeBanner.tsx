@@ -13,7 +13,7 @@ export default function HomeBanner() {
                     <p className="banner_try">Allez-y, essayez !</p>
                     <div className="banner_search">
                         <img src="/assets/icon/search-icon.png" alt="" />
-                        <input type="text" placeholder="Rechercher un produit" />
+                        <input type="text" placeholder="Rechercher une marque" />
                     </div>
                 </div>
             </div>

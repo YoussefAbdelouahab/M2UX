@@ -31,7 +31,7 @@ export default function Navbar({ page = "" }) {
                     </div>
                     <div className={Active ? "nav_search active" : "nav_search"}>
                         <img src="/assets/icon/search-icon.png" alt="" />
-                        <input type="text" placeholder="Rechercher un produit" />
+                        <input type="text" placeholder="Rechercher une marque" />
                         <img src="/assets/icon/cross-icon.png" alt="" className="cross" onClick={() => HideSearch()} />
                     </div>
                 </div>
