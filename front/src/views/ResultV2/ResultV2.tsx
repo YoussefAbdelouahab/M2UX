@@ -70,14 +70,7 @@ export default function ResultV2() {
     }
 
     async function SearchWord() {
-        let content = "Répond moi en un seul mot, donne-moi une marque de produit équivalent en France : " + SearchedWord
-        
-        const config = {
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${API_KEY}`,
-            },
-        };
+      
         // Requete axios a l'api open ai
         const response = await axios.post(IA_URL, data, config) 
         navigate(`/resultat/${response.data.choices[0].message.content}`)
