@@ -12,6 +12,8 @@
         align-items: center;
         justify-content: center;
         width: 50%;
+        animation: fade-inout 3s;
+
 
         img {
             filter: invert(1);
@@ -22,17 +24,27 @@
         width: 50%;
         color: white;
 
+        h1 {
+            animation: fade-inout 3s;
+
+        }
+
         .banner_subtitle {
             font-size: 24px;
             width: 60%;
+            animation: fade-inout 4s;
+
         }
 
         .banner_try {
             font-size: 18px;
             font-weight: bold;
+            animation: fade-inout 5s;
+
         }
 
         .banner_search_compare {
+            animation: fade-inout 5s;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -149,4 +161,14 @@
 
 .active {
     display: flex !important;
+}
+
+@keyframes fade-inout {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

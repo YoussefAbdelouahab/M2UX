@@ -12,19 +12,27 @@
         align-items: center;
         justify-content: center;
         width: 50%;
+        animation: fade-inout 3s;
     }
 
     .banner_right {
         width: 50%;
         color: white;
 
+        h1 {
+            animation: fade-inout 3s;
+        }
+
         .banner_subtitle {
             font-size: 24px;
+            animation: fade-inout 4s;
+
         }
 
         .banner_try {
             font-size: 18px;
             font-weight: bold;
+            animation: fade-inout 5s;
         }
 
         .banner_search {
@@ -34,6 +42,7 @@
             gap: 30px;
             padding: 10px;
             border-radius: 30px;
+            animation: fade-inout 5s;
 
             img {
                 filter: invert(1);
@@ -60,5 +69,15 @@
         }
 
 
+    }
+}
+
+@keyframes fade-inout {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

@@ -2,7 +2,7 @@ import "./Compare.scss"
 import Navbar from "../../components/Navbar/Navbar"
 
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import axios from "axios";
 
 export default function Compare() {
@@ -10,7 +10,6 @@ export default function Compare() {
     const [Brand2, setBrand2] = useState("");
     const [Brand1Data, setBRand1Data] = useState(Object);
     const [Brand2Data, setBRand2Data] = useState(Object);
-    const navigate = useNavigate();
 
     async function CompareBrands() {
         await axios.get(`https://world.openfoodfacts.org/api/v2/search?countries_tags_fr=france&page=1&page_size=1&brands_tags=${Brand1}&fields=product_name,countries_tags_fr,categories,nutriscore_2023_tags,additives_tags,image_url,allergens_from_ingredients,stores_tags`)
@@ -21,7 +20,6 @@ export default function Compare() {
             .then(res => {
                 setBRand2Data(res.data.products[0])
             })
-        navigate("#compargin")
     }
     return (
         <>
@@ -43,16 +41,16 @@ export default function Compare() {
                             <img src="/assets/icon/search-icon.png" alt="" />
                             <input id="article1" type="text" placeholder="Rechercher la deuxième marque" onChange={e => setBrand2(e.target.value)} />
                         </div>
-                        <button onClick={() => CompareBrands()}>Comparer les marques</button>
+                        <Link to="#section-1" smooth><button onClick={() => CompareBrands()}>Comparer les marques</button></Link>
                     </div>
                 </div>
             </div>
 
             {Brand1Data === undefined || Brand2Data === undefined || Object.keys(Brand1Data).length === 0 || Object.keys(Brand2Data).length === 0 ?
                 null : <>
-                    <section id="comparing" className={Brand1Data === undefined || Brand2Data === undefined || Object.keys(Brand1Data).length === 0 || Object.keys(Brand2Data).length === 0 ?
+                    <section className={Brand1Data === undefined || Brand2Data === undefined || Object.keys(Brand1Data).length === 0 || Object.keys(Brand2Data).length === 0 ?
                         "compare_data" : "compare_data active"}>
-                        <div className="brand brand1">
+                        <div className="brand brand1" id="section-1">
                             <div className="box">
                                 <p>Marque</p>
                                 <h2>{Brand1Data.product_name}</h2>
