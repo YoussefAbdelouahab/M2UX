@@ -70,9 +70,6 @@ export default function ResultV2() {
     }
 
     async function SearchWord() {
-        var IA_MODEL = "gpt-4-1106-preview"
-        var IA_URL = "https://api.openai.com/v1/chat/completions"
-        var API_KEY = "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"
         let content = "Répond moi en un seul mot, donne-moi une marque de produit équivalent en France : " + SearchedWord
         const data = {
             model: IA_MODEL,
